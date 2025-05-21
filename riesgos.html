@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenazas - Introducción a la Ciberseguridad</title>
+    <link rel="icon" type="image/png" href="imagenes/lock.png">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a162e;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c2452;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #1a162e;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #8253b5;
+      color: white;
+      box-shadow: 0 4px 10px rgba(130, 83, 181, 0.5);
+    }
+
+    .contenido {
+      padding: 20px;
+      background-color: #1a162e;
+      color: #f4f4f4;
+    }
+
+    h2, h3 {
+      color: white;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin: 20px 0;
+      display: block;
+    }
+
+    footer {
+      background-color: #1a162e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .frame {
+      background-color: #2a2349;
+      border: 2px solid #8253b5;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 15px;
+      color: #c3bdd7;
+      box-shadow: 0 4px 10px rgba(130, 83, 181, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .frame:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(130, 83, 181, 0.4);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #frasesAmenazas {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ddd;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .top-frame {
+      padding: 15px;
+      background-color: #2a2349;
+      border-radius: 12px;
+      border: 2px solid #8253b5;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #9c88c0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amenazas Cibernéticas Comunes</h1>
+        <p id="frasesAmenazas">Conoce las amenazas más comunes en el mundo digital</p>
+    </header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="riesgos.html">Amenazas</a>
+  <a href="buenas-practicas.html">Protección</a>
+  <a href="recursos.html">Recursos</a>
+  <a href="noticias.html">Noticias</a>
+</nav>
+
+    <div class="contenido">
+        <div class="top-frame">
+        <h2>Principales amenazas en el mundo digital</h2>
+        <p>En Internet existen múltiples amenazas que pueden comprometer tu información personal o empresarial. Aquí conocerás las más comunes y cómo afectan a los usuarios.</p>
+        </div>
+        <div class="container">  
+
+        <div class="frame">
+        <h3>1. Phishing</h3>
+        <p>El phishing es un método en el que los atacantes se hacen pasar por entidades confiables (como bancos o redes sociales) para obtener tus datos personales. Generalmente, se realiza por correo electrónico o mensajes falsos.</p>
+        <img src="imagenes/phishing.png" alt="Ejemplo de phishing">
+        </div>
+
+        <div class="frame">
+        <h3>2. Malware</h3>
+        <p>El malware es software malicioso que puede dañar tu sistema, robar información o espiar tus actividades. Incluye virus, troyanos, spyware y adware.</p>
+        <img src="imagenes/malware.png" alt="Representación de malware">
+        </div>
+
+        <div class="frame">
+        <h3>3. Ransomware</h3>
+        <p>Es un tipo de malware que bloquea tus archivos o sistema y exige un rescate (pago) para recuperarlos. Muchas empresas han sido víctimas de este tipo de ataque.</p>
+        <img src="imagenes/ransomware.png" alt="Ransomware ejemplo">
+        </div>
+        </div>
+
+        <div class="container">
+
+        <div class="frame">
+        <h3>4. Ingeniería Social</h3>
+        <p>Los atacantes manipulan psicológicamente a las personas para que revelen información confidencial, como contraseñas o datos bancarios. No siempre se basa en tecnología, sino en engaños.</p>
+        <img src="imagenes/social-engineering.png" alt="Ingeniería social ejemplo">
+        </div>
+
+        <div class="frame">
+        <h3>5. Redes Wi-Fi inseguras</h3>
+        <p>Conectarse a redes públicas puede ser muy peligroso. Los atacantes pueden interceptar datos y contraseñas que envías a través de una red sin cifrado.</p>
+        <img src="imagenes/MitM.png" alt="Man in the middle ejemplo">
+        </div>
+
+        <div class="frame">
+        <h3>¿Cómo protegerte?</h3>
+        <p>Visita nuestra <a href="buenas-practicas.html" style="color: #00bcd4;">sección de buenas prácticas</a> para aprender cómo protegerte ante estas amenazas.</p>
+        </div>
+        </div>
+
+    <footer>
+        Proyecto creado por Josejuan López - Ingeniería en Sistemas - 2025
+    </footer>
+    <script>
+    const frasesAmenazas = [
+        "Conoce las amenazas más comunes en el mundo digital",
+        "El Wi-Fi público puede ser una trampa",
+        "No abras archivos sospechosos ni enlaces extraños",
+        "Cuidado con los correos de phishing",
+        "Protege tu información, evita ser víctima"
+    ];
+
+    let i = 0;
+    const elemento = document.getElementById("frasesAmenazas");
+
+    function cambiarFrase() {
+        elemento.style.opacity = 0;
+        setTimeout(() => {
+            elemento.textContent = frasesAmenazas[i];
+            elemento.style.opacity = 1;
+            i = (i + 1) % frasesAmenazas.length;
+        }, 1000);
+    }
+
+    cambiarFrase();
+    setInterval(cambiarFrase, 5000);
+</script>
+</body>
+</html>

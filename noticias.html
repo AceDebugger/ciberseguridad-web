@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Noticias - Ciberseguridad Actual</title>
+  <link rel="icon" type="image/png" href="imagenes/lock.png">
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a162e;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+header, footer {
+  background-color: #2c2452;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #1a162e;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #8253b5;
+  color: white;
+  box-shadow: 0 4px 10px rgba(130, 83, 181, 0.5);
+}
+
+.contenido {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #1a162e;
+  color: #f4f4f4;
+}
+
+.noticia {
+  background-color: #2a2349;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  border: 2px solid #8253b5;
+  box-shadow: 0 0 8px rgba(130, 83, 181, 0.2);
+}
+
+.noticia:hover {
+  background-color: #3a2f60;
+  transform: translateY(-3px);
+}
+
+.noticia h3 {
+  color: #d5c8f0;
+}
+
+.noticia a {
+  color: #b093e6;
+  text-decoration: none;
+}
+
+.noticia a:hover {
+  text-decoration: underline;
+}
+
+#subtitulo {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #d5c8f0;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Noticias de Ciberseguridad</h1>
+  <p id="subtitulo">Mantente informado sobre los últimos riesgos y ataques</p>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="riesgos.html">Amenazas</a>
+  <a href="buenas-practicas.html">Protección</a>
+  <a href="recursos.html">Recursos</a>
+  <a href="noticias.html">Noticias</a>
+</nav>
+
+<div class="contenido">
+  <div class="noticia">
+    <h3>🔐 Se filtran millones de contraseñas en una nueva brecha de seguridad</h3>
+    <p>Una base de datos con más de 9 millones de contraseñas fue expuesta en la dark web. Se recomienda a todos los usuarios cambiar sus claves inmediatamente.</p>
+    <p><a href="https://www.linkedin.com/pulse/se-filtran-56-millones-de-credenciales-en-la-dark-web-un-riesgo-wzd9f/" target="_blank">Leer más</a></p>
+  </div>
+
+  <div class="noticia">
+    <h3>📱 Nueva estafa por SMS se hace pasar por empresas de paquetería</h3>
+    <p>Los atacantes envían mensajes con enlaces falsos para robar información bancaria. ¡No hagas clic si no esperas ningún paquete!</p>
+    <p><a href="https://lahora.gt/nacionales/hloarca/2024/09/04/alertan-de-estafas-por-mensajes-de-texto-que-usurpan-nombres-de-empresas-conocidas/" target="_blank">Leer más</a></p>
+  </div>
+
+  <div class="noticia">
+    <h3>💻 Ataque a hospitales compromete datos sensibles</h3>
+    <p>Un ciberataque masivo afectó a varias instituciones médicas, exponiendo información personal y médica de miles de pacientes.</p>
+    <p><a href="https://www.incibe.es/index.php/incibe-cert/publicaciones/bitacora-de-seguridad/robados-56-millones-de-datos-de-pacientes-de-ascension-health" target="_blank">Leer más</a></p>
+  </div>
+</div>
+
+<footer>
+  Proyecto creado por Josejuan López - Ingeniería en Sistemas - 2025
+</footer>
+<script>
+  const frases = [
+    "Mantente informado sobre los últimos riesgos y ataques",
+    "Lo que no conoces puede ponerte en peligro",
+    "Estar al día es proteger tu identidad",
+    "Las amenazas cambian, tu seguridad también debe hacerlo",
+    "Conoce los ataques más recientes en la red"
+  ];
+
+  let indice = 0;
+  const subtitulo = document.getElementById("subtitulo");
+
+  function cambiarFrase() {
+    subtitulo.style.opacity = 0;
+    setTimeout(() => {
+      subtitulo.textContent = frases[indice];
+      subtitulo.style.opacity = 1;
+      indice = (indice + 1) % frases.length;
+    }, 1000);
+  }
+
+  cambiarFrase();
+  setInterval(cambiarFrase, 5000);
+</script>
+
+</body>
+</html>

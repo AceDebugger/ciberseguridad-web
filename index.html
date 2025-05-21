@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Introducción a la Ciberseguridad</title>
+    <link rel="icon" type="image/png" href="imagenes/lock.png">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a162e;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c2452;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #1a162e;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #8253b5;
+    color: white;
+    box-shadow: 0 4px 10px rgba(130, 83, 181, 0.5);
+}
+
+.contenido {
+    padding: 20px;
+    background-color: #1a162e;
+    color: #f4f4f4;
+}
+
+footer {
+    background-color: #1a162e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+#subtitulo {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #d5c8f0;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 2px solid #8253b5;
+    background-color: #2a2349;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+video {
+    width: 30%;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(130, 83, 181, 0.3);
+    border: 2px solid #8253b5;    
+}
+
+.top-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+
+}
+
+.frame {
+    width: 50%;
+    background-color: #2a2349;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(130, 83, 181, 0.2);
+    color: #e0dbf0;
+    border: 2px solid #8253b5;
+}
+
+.inferior {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2a2349;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(130, 83, 181, 0.2);
+    color: #f4f4f4;
+    border: 2px solid #8253b5;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Introducción a la Ciberseguridad</h1>
+        <p id="subtitulo">Descubre cómo proteger tu información en el mundo digital</p>
+    </header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="riesgos.html">Amenazas</a>
+  <a href="buenas-practicas.html">Protección</a>
+  <a href="recursos.html">Recursos</a>
+  <a href="noticias.html">Noticias</a>
+</nav>
+
+    <div class="contenido">
+        <div class="top-container">
+        <div class="frame">
+        <h2>¿Qué es la ciberseguridad?</h2>
+        <p>
+            La ciberseguridad es el conjunto de prácticas, tecnologías y procesos diseñados para proteger los sistemas, redes y datos digitales frente a accesos no autorizados, ciberataques o daños.
+            En un mundo donde gran parte de nuestra vida está conectada a Internet, la seguridad informática es más importante que nunca.
+        </p>
+        </div>
+        <div class="frame">
+        <h3>¿Por qué es importante?</h3>
+        <p>
+            Cada día se realizan millones de intentos de hackeo, robos de identidad y fraudes en línea. La ciberseguridad ayuda a proteger tanto a personas como a organizaciones frente a estas amenazas, garantizando la privacidad, la integridad y la disponibilidad de la información.
+        </p>
+        </div>
+        </div>
+        <div class="container">
+        <video autoplay muted loop>
+            <source src="videos/ClipArt1.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="videos/ClipArt2.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="videos/ClipArt3.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="inferior">
+        <p>
+            En este sitio web aprenderás sobre los principales riesgos que existen en línea, cómo protegerte de ellos y dónde encontrar recursos adicionales para mejorar tu conocimiento sobre la seguridad en Internet.
+        </p>
+        </div>
+    </div>
+
+    <footer>
+        Proyecto creado por Josejuan López - Ingeniería en Sistemas - 2025
+    </footer>
+
+    <script>
+    const frases = [
+        "Descubre cómo proteger tu información en el mundo digital",
+        "Aprende a evitar fraudes y amenazas cibernéticas",
+        "Tu seguridad en línea es tu responsabilidad",
+        "Conoce los peligros del mundo digital",
+        "Protege tus contraseñas y tu identidad"
+    ];
+
+    let indice = 0;
+    const subtitulo = document.getElementById("subtitulo");
+
+    function cambiarFrase() {
+        subtitulo.style.opacity = 0;
+        setTimeout(() => {
+            subtitulo.textContent = frases[indice];
+            subtitulo.style.opacity = 1;
+            indice = (indice + 1) % frases.length;
+        }, 1000);
+    }
+
+    cambiarFrase();
+    setInterval(cambiarFrase, 5000);
+</script>
+</body>
+</html>
